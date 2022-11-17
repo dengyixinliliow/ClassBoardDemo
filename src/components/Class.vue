@@ -64,14 +64,21 @@ export default {
 		<div class="class-card">
 			<div class="class-img">
 				<p class="class-description">{{ description }}</p>
-        <div class="class-btn">
-          <button @click="onReserveClicked" class="class-reserve"><font-awesome-icon icon="check-circle"/></button>
-          <button @click="onCollectClicked" class="class-collect"><font-awesome-icon icon="star"/></button>
-        </div>
+				<div class="class-btn">
+					<button @click="onReserveClicked" class="class-reserve">
+						<font-awesome-icon icon="check-circle" />
+					</button>
+					<button @click="onCollectClicked" class="class-collect">
+						<font-awesome-icon icon="star" />
+					</button>
+				</div>
 			</div>
 			<div class="class-title">{{ title }}</div>
 			<div class="collection">
-				<font-awesome-icon icon="star" :class="[collected ? 'icon-active' : 'icon']"/>
+				<font-awesome-icon
+					icon="star"
+					:class="[collected ? 'icon-active' : 'icon']"
+				/>
 				<span>{{ countCollection }}</span>
 			</div>
 		</div>
@@ -108,7 +115,7 @@ export default {
 }
 
 .icon-active {
-  color: #e69b00;
+	color: #e69b00;
 }
 
 .icon:hover {
@@ -122,14 +129,15 @@ export default {
 }
 
 .class-btn {
-  position: absolute;
-  bottom: 0.2rem;
-  right: 0.2rem;
+	position: absolute;
+	bottom: 0.2rem;
+	right: 0.2rem;
 }
 
-.class-reserve, .class-collect {
-  margin: 0.1rem;
-  background-color: #ffffff;
+.class-reserve,
+.class-collect {
+	margin: 0.1rem;
+	background-color: #ffffff;
 	border: 0.1rem solid #ffffff;
 	border-radius: 0.25rem;
 	cursor: pointer;
@@ -153,7 +161,7 @@ export default {
 	background-color: #1e90ff;
 	width: 100%;
 	height: 10rem;
-  position: relative;
+	position: relative;
 }
 
 .class-description {

@@ -15,8 +15,8 @@ export default {
 					time: '10:30AM',
 					peroid: '11/01-11/06',
 					description: 'This class talks about the math',
-					author: "alice, bob, cindy",
-					collection_num: 25
+					author: 'alice, bob, cindy',
+					collection_num: 25,
 				},
 				{
 					id: 2,
@@ -25,8 +25,8 @@ export default {
 					time: '10:30AM',
 					peroid: '11/02-11/10',
 					description: 'This class talks about the english',
-					author: "alice, bob, cindy",
-					collection_num: 23
+					author: 'alice, bob, cindy',
+					collection_num: 23,
 				},
 				{
 					id: 3,
@@ -34,8 +34,9 @@ export default {
 					date: '11/02',
 					time: '10:30AM',
 					peroid: '11/02-11/11',
-					description: 'This class talks about the music.music, art concerned with combining vocal or instrumental sounds for beauty of form or emotional expression, usually according to cultural standards of rhythm, melody, and, in most Western music, harmony.',
-					collection_num: 0
+					description:
+						'This class talks about the music.music, art concerned with combining vocal or instrumental sounds for beauty of form or emotional expression, usually according to cultural standards of rhythm, melody, and, in most Western music, harmony.',
+					collection_num: 0,
 				},
 				{
 					id: 4,
@@ -44,8 +45,8 @@ export default {
 					time: '10:30AM',
 					peroid: '11/01-11/06',
 					description: 'This class talks about the math',
-					author: "alice",
-					collection_num: 3
+					author: 'alice',
+					collection_num: 3,
 				},
 				{
 					id: 5,
@@ -54,7 +55,7 @@ export default {
 					time: '10:30AM',
 					peroid: '11/02-11/10',
 					description: 'This class talks about the englisj',
-					collection_num: 29
+					collection_num: 29,
 				},
 				{
 					id: 6,
@@ -63,7 +64,7 @@ export default {
 					time: '10:30AM',
 					peroid: '11/02-11/11',
 					description: 'This class talks about the music',
-					collection_num: 3
+					collection_num: 3,
 				},
 			],
 		};
@@ -74,27 +75,27 @@ export default {
 			const slider = this.$refs.slider;
 			// container.scrollLeft -= 300
 			let scrollAmount = 0;
-			let slideTimer = setInterval(function(){
-					console.log("yesy")
-					slider.scrollLeft -= 10;
-					scrollAmount += 10;
-					if(scrollAmount >= 200){
-							window.clearInterval(slideTimer);
-					}
+			let slideTimer = setInterval(function () {
+				console.log('yesy');
+				slider.scrollLeft -= 10;
+				scrollAmount += 10;
+				if (scrollAmount >= 200) {
+					window.clearInterval(slideTimer);
+				}
 			}, 25);
 		},
-		scrollRight () {
-      const slider = this.$refs.slider;
-      let scrollAmount = 0;
-			let slideTimer = setInterval(function(){
-					console.log("yesy")
-					slider.scrollLeft += 10;
-					scrollAmount += 10;
-					if(scrollAmount >= 200){
-							window.clearInterval(slideTimer);
-					}
+		scrollRight() {
+			const slider = this.$refs.slider;
+			let scrollAmount = 0;
+			let slideTimer = setInterval(function () {
+				console.log('yesy');
+				slider.scrollLeft += 10;
+				scrollAmount += 10;
+				if (scrollAmount >= 200) {
+					window.clearInterval(slideTimer);
+				}
 			}, 25);
-    }
+		},
 	},
 };
 </script>
@@ -105,7 +106,7 @@ export default {
 		<button class="calendar_btn">查看课程时间</button>
 	</div>
 
-	<div class="container" >
+	<div class="container">
 		<div class="slider" ref="slider">
 			<Class
 				v-for="class_item in classes"
@@ -144,7 +145,7 @@ export default {
 }
 
 .slider::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 header {
@@ -172,7 +173,7 @@ button,
 }
 
 .calendar_btn:hover {
-	background-color: #0000FF;
+	background-color: #0000ff;
 }
 
 .scroll_btn {
